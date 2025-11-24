@@ -1,4 +1,4 @@
-
+-- Ket: Tabel sebagai penyimpanan dataset pelanggan.
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
@@ -7,6 +7,7 @@ CREATE TABLE customers (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Ket: Tabel sebagai penyimpanan dataset produk-produk dijual.
 CREATE TABLE products (
     product_id SERIAL PRIMARY KEY,
     product_name VARCHAR(150) NOT NULL,
@@ -15,7 +16,7 @@ CREATE TABLE products (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Ket: Tabel sebagai penyimpangan dataset transaksi pembelian per-customer.
 CREATE TABLE orders (
     order_id SERIAL PRIMARY KEY,
     customer_id INT REFERENCES customers(customer_id),
@@ -23,7 +24,7 @@ CREATE TABLE orders (
     total_amount DECIMAL(10,2)
 );
 
-
+-- Ket: Tabel sebagai penyimpanan dataset detail transaksi pembelian produk per-customer. 
 CREATE TABLE order_items (
     order_item_id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(order_id) ON DELETE CASCADE,
