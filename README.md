@@ -1,5 +1,11 @@
-# Judul Project;
-Mini E-Commerce SQL Database Project
+# Mini E-Commerce SQL Database Project
+
+**Display Order Items & Product Name;**<br>
+![fullorderlist](Assets/I1_fullorderslist.png)<br>
+**Display Total Sales each Product;**<br>
+![sumofsales](Assets/I2_sumofsales.png)<br>
+**Display Most Customer Purchased;**<br>
+![custmost](Assets/I3_custmost.png)
 
 # Desc;
 Project latihan SQL beginner,<br>
